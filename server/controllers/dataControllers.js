@@ -93,5 +93,13 @@ module.exports = {
         }catch(err){
             throw{err}
         }
+    },
+    getallRelation : async(req,res) => {
+        try{
+            const users = await Relation.find({})
+            res.json({StatusCode: 201 , users})
+        }catch(err){
+            throw{err}
+        }
     }
 }
